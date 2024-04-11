@@ -2,14 +2,14 @@
 def verifica_resultado(tabuleiro):
     # Verifica linhas e colunas
     for i in range(3):
-        if tabuleiro[i][0] == tabuleiro[i][1] == tabuleiro[i][2] != ' ':
+        if tabuleiro[i][0] == tabuleiro[i][1] == tabuleiro[i][2] != 'b':
             return tabuleiro[i][0] + "wins"
-        if tabuleiro[0][i] == tabuleiro[1][i] == tabuleiro[2][i] != ' ':
+        if tabuleiro[0][i] == tabuleiro[1][i] == tabuleiro[2][i] != 'b':
             return tabuleiro[0][i] + "wins"
     # Verifica diagonais
-    if tabuleiro[0][0] == tabuleiro[1][1] == tabuleiro[2][2] != ' ':
+    if tabuleiro[0][0] == tabuleiro[1][1] == tabuleiro[2][2] != 'b':
         return tabuleiro[0][0] + "wins"
-    if tabuleiro[0][2] == tabuleiro[1][1] == tabuleiro[2][0] != ' ':
+    if tabuleiro[0][2] == tabuleiro[1][1] == tabuleiro[2][0] != 'b':
         return tabuleiro[0][2] + "wins"
     # Verifica empate
     if all([pos != 'b' for linha in tabuleiro for pos in linha]):
