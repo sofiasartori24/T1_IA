@@ -1,0 +1,6 @@
+{
+    "python.analysis.extraPaths": [
+        "./T1_IA/ ",
+        "./T1_IA/ "
+    ]
+}
